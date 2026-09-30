@@ -1,0 +1,59 @@
+{
+  "version": "2.0",
+  "updated": "2026-09-30",
+  "layout": "sprite-sheets",
+  "sheet_grid": { "cols": 4, "rows": 3, "frames_per_sheet": 12 },
+  "frame_size": { "width": 1280, "height": 720 },
+  "sheet_naming": "sheet-%02d.jpg (starting at sheet-01, in /frames/<sequence>/)",
+  "sequences": {
+    "black": {
+      "frame_count": 96,
+      "sheet_count": 8,
+      "public_path": "/frames/black/",
+      "source_frames": "frame-source/black/ (0000–0095.jpg, not deployed)",
+      "source_video": "assets/videos/black.mp4 → moved to sarkar-Landing/public/videos/black.mp4",
+      "description": "Perfume bottle on black surface, 8s — used by the 360° VIEW scrub section"
+    },
+    "unboxing": {
+      "frame_count": 120,
+      "sheet_count": 10,
+      "public_path": "/frames/unboxing/",
+      "source_frames": "frame-source/unboxing/ (0000–0119.jpg, not deployed)",
+      "source_video": "sarkar-Landing/public/videos/unboxing.mp4",
+      "description": "Perfume unboxing, 10s — used by the THE UNBOXING scrub section"
+    },
+    "orion": {
+      "frame_count": 96,
+      "sheet_count": 8,
+      "public_path": "/frames/orion/",
+      "source_frames": "frame-source/orion/ (0000–0095.jpg, not deployed)",
+      "source_video": "sarkar-Landing/public/videos/orion.mp4 (no longer referenced by the page)",
+      "description": "Perfume bottle on reflective surface, 8s — used by the ORION scroll-scrub section"
+    },
+    "reveal": {
+      "frame_count": 120,
+      "sheet_count": 10,
+      "public_path": "/frames/reveal/",
+      "source_frames": "frame-source/reveal/ (0000–0119.jpg, not deployed)",
+      "source_video": "sarkar-Landing/public/videos/reveal.mp4 (no longer referenced by the page)",
+      "description": "Perfume bottles reveal in studio, 10s — used by the POWER ISN'T INHERITED scroll-scrub section"
+    }
+  },
+  "notes": [
+    "Scrub engine lives in src/main.js (initFrameScrub). It loads /frames/<sequence>/sheet-XX.jpg and draws the sub-rectangle for the current frame.",
+    "Set CDN_FRAME_BASE in src/main.js to serve sheets from a CDN instead of /frames/.",
+    "Perfume sections (CanvasScrub, src/sections/canvasScrub.js) use LOOSE 1-indexed frames from /frames-src/<folder>/frame_0001.jpg… — set CLOUD in canvasScrub.js to stream those from Cloudinary instead."
+  ],
+  "loose_frames": {
+    "location": "/frames-src/<folder>/frame_NNNN.jpg (1-indexed, 1280w)",
+    "used_by": "CanvasScrub sections (sec-throne / sec-orion / sec-noble / sec-regal)",
+    "cloudinary": {
+      "upload_prefix": "https://res.cloudinary.com/<CLOUD>/image/upload/f_auto,q_auto,w_960|1920/",
+      "folders": ["frames-throne", "frames-orion", "frames-noble", "frames-regal"],
+      "how_to_enable": "set CLOUD = 'your-cloud-name' in src/sections/canvasScrub.js"
+    },
+    "folders": {
+      "frames-unboxing": { "source": "frame-source/unboxing", "count": 120, "used_by": "premium unboxing section (src/unboxing.js)" }
+    }
+  }
+}

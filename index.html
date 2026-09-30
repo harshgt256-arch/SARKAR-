@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SARKAR — Power Isn't Inherited. It's Built.</title>
+  <meta name="description" content="Premium luxury fragrances. Dark cinematic aesthetic. Absolute. Dark. Unrivalled." />
+
+  <!-- Unbounded — geometric sans, weights 200–900 (design.md §2) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Unbounded:wght@200;300;400;500;600;700;800;900&display=swap"
+    rel="stylesheet"
+  />
+
+  <link rel="stylesheet" href="/src/style.css" />
+  <script type="module" src="/src/main.js"></script>
+  <script type="module" src="/src/shop.js"></script>
+  <script defer src="/src/editorial.js"></script>
+  <script defer src="/src/final.js"></script>
+</head>
+<body class="template--index">
+
+  <!-- ══════════════ ANNOUNCEMENT BAR — scrolling marquee ══════════════ -->
+  <div class="announcement-bar" aria-hidden="true">
+    <div class="announcement-bar__track">
+      <span class="announcement-bar__text"
+        >BEST OFFERS APPLIED AT CHECKOUT <span class="dot">·</span> FREE GIFT WITH
+        EVERY ORDER <span class="dot">·</span> FREE SHIPPING ABOVE ₹999
+        <span class="dot">·</span>&nbsp;</span
+      ><span class="announcement-bar__text"
+        >BEST OFFERS APPLIED AT CHECKOUT <span class="dot">·</span> FREE GIFT WITH
+        EVERY ORDER <span class="dot">·</span> FREE SHIPPING ABOVE ₹999
+        <span class="dot">·</span>&nbsp;</span
+      ><span class="announcement-bar__text"
+        >BEST OFFERS APPLIED AT CHECKOUT <span class="dot">·</span> FREE GIFT WITH
+        EVERY ORDER <span class="dot">·</span> FREE SHIPPING ABOVE ₹999
+        <span class="dot">·</span>&nbsp;</span
+      >
+    </div>
+  </div>
+
+  <!-- ══════════════ FIXED HEADER ══════════════ -->
+  <header class="site-header" id="header">
+    <a href="#" class="site-header__wordmark">SARKAR</a>
+
+    <nav class="site-header__nav" aria-label="Primary">
+      <a href="#shop">Shop All</a>
+      <a href="#perfume-sections">Fragrances</a>
+      <a href="#perfume-sections">Build Your Bundle</a>
+      <a href="#legacy">Know Sarkar</a>
+    </nav>
+
+    <div class="site-header__actions">
+      <a href="#perfume-sections" class="site-header__buy">Buy Now</a>
+      <button class="site-header__cart" aria-label="Cart">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+          <path
+            d="M6 8h12l-1.2 12.2a1.5 1.5 0 0 1-1.5 1.3H8.7a1.5 1.5 0 0 1-1.5-1.3L6 8z"
+            stroke="currentColor"
+            stroke-width="1.4"
+          />
+          <path
+            d="M9 10V6a3 3 0 0 1 6 0v4"
+            stroke="currentColor"
+            stroke-width="1.4"
+            stroke-linecap="round"
+          />
+        </svg>
+      </button>
+      <button class="site-header__burger" aria-label="Menu">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ══════════════ HERO — VIDEO ══════════════ -->
+    <section class="hero" id="hero">
+      <video
+        class="hero__video"
+        src="/videos/hero.mp4"
+        autoplay
+        muted
+        loop
+        playsinline
+        preload="auto"
+      ></video>
+      <div class="hero__gradient"></div>
+
+      <div class="hero__content" id="hero-content">
+        <h1 class="hero__title">SARKAR</h1>
+        <p class="hero__subtitle">The One &amp; Only</p>
+        <button class="hero__discover" id="discover-btn" type="button">Discover</button>
+      </div>
+    </section>
+
+    <!-- ══════════════ FRAGRANCE GRID ══════════════ -->
+    <section class="section section--fragrances" id="perfume-sections">
+      <div class="page-width">
+        <h2 class="section__heading h0 scroll-trigger animate--slide-in">
+          THE COLLECTION
+        </h2>
+
+        <ul class="grid product-grid grid--4-col-desktop grid--2-col-tablet-down">
+          <li class="grid__item scroll-trigger animate--slide-in" style="--animation-order: 0">
+            <article class="card-wrapper">
+              <div class="card__media">
+                <span class="products_viewer_notes"><span>FRESH · WOODY · AROMATIC</span></span>
+                <img
+                  src="/images/blubbfblubbfblub.png"
+                  alt="Throne parfum bottle"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__information">
+                <h3 class="card__heading">Throne</h3>
+                <div class="product-size-badge-list">
+                  <span class="custom-badge-size">10ML</span>
+                  <span class="custom-badge-size">50ML</span>
+                </div>
+                <div class="price">
+                  <span class="price-item price-item--regular">₹1,399</span>
+                  <span class="price-item price-item--sale">₹1,499</span>
+                </div>
+                <span class="price__note">Incl. of all taxes</span>
+                <button class="button quick-add__submit">ADD TO CART</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="grid__item scroll-trigger animate--slide-in" style="--animation-order: 1">
+            <article class="card-wrapper">
+              <div class="card__media">
+                <span class="products_viewer_notes"><span>SPICY · LEATHER · OUD</span></span>
+                <img
+                  src="/images/nvrs3tnvrs3tnvrs.png"
+                  alt="Noble parfum bottle"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__information">
+                <h3 class="card__heading">Noble</h3>
+                <div class="product-size-badge-list">
+                  <span class="custom-badge-size">10ML</span>
+                  <span class="custom-badge-size">50ML</span>
+                </div>
+                <div class="price">
+                  <span class="price-item price-item--regular">₹1,399</span>
+                  <span class="price-item price-item--sale">₹1,499</span>
+                </div>
+                <span class="price__note">Incl. of all taxes</span>
+                <button class="button quick-add__submit">ADD TO CART</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="grid__item scroll-trigger animate--slide-in" style="--animation-order: 2">
+            <article class="card-wrapper">
+              <div class="card__media">
+                <span class="products_viewer_notes"><span>FLORAL · MUSK · AMBER</span></span>
+                <img
+                  src="/images/4v3vus4v3vus4v3v.png"
+                  alt="Regal parfum bottle"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__information">
+                <h3 class="card__heading">Regal</h3>
+                <div class="product-size-badge-list">
+                  <span class="custom-badge-size">10ML</span>
+                  <span class="custom-badge-size">50ML</span>
+                </div>
+                <div class="price">
+                  <span class="price-item price-item--regular">₹1,399</span>
+                  <span class="price-item price-item--sale">₹1,499</span>
+                </div>
+                <span class="price__note">Incl. of all taxes</span>
+                <button class="button quick-add__submit">ADD TO CART</button>
+              </div>
+            </article>
+          </li>
+
+          <li class="grid__item scroll-trigger animate--slide-in" style="--animation-order: 3">
+            <article class="card-wrapper">
+              <div class="card__media">
+                <span class="products_viewer_notes"><span>CITRUS · VETIVER · CEDAR</span></span>
+                <img
+                  src="/images/oonshxoonshxoons.png"
+                  alt="Orion parfum bottle"
+                  loading="lazy"
+                />
+              </div>
+              <div class="card__information">
+                <h3 class="card__heading">Orion</h3>
+                <div class="product-size-badge-list">
+                  <span class="custom-badge-size">10ML</span>
+                  <span class="custom-badge-size">50ML</span>
+                </div>
+                <div class="price">
+                  <span class="price-item price-item--regular">₹1,399</span>
+                  <span class="price-item price-item--sale">₹1,499</span>
+                </div>
+                <span class="price__note">Incl. of all taxes</span>
+                <button class="button quick-add__submit">ADD TO CART</button>
+              </div>
+            </article>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ══════════════ SHOWCASE — FULL-BLEED VIDEO ══════════════ -->
+    <section class="showcase" id="world">
+      <div class="showcase__media">
+        <video
+          class="showcase__video"
+          src="/videos/reveal.mp4"
+          muted
+          loop
+          playsinline
+          data-autoplay
+        ></video>
+      </div>
+      <div class="showcase__caption page-width">
+        <p class="showcase__eyebrow scroll-trigger animate--fade-in">THE REVEAL</p>
+        <h2 class="showcase__title hxl scroll-trigger animate--slide-in">
+          POWER ISN'T INHERITED.<br />IT'S BUILT.
+        </h2>
+      </div>
+    </section>
+
+    <!-- ══════════════ MANIFESTO / LEGACY ══════════════ -->
+    <section class="section section--manifesto" id="legacy">
+      <div class="page-width manifesto__inner">
+        <p class="manifesto__kicker scroll-trigger animate--fade-in">THE HOUSE OF SARKAR</p>
+        <p class="manifesto__text h2 scroll-trigger animate--slide-in">
+          MILITARY-GRADE PRECISION. ZERO ORNAMENT. ONE COMMANDING SIGNATURE —
+          CRAFTED FOR THOSE WHO ANSWER TO NO ONE.
+        </p>
+        <a href="#fragrances" class="button scroll-trigger animate--fade-in">SHOP THE COLLECTION</a>
+      </div>
+    </section>
+
+    <!-- ══════════════ 360° SCROLL-SCRUB VIEWER (design.md §8) ══════════════ -->
+    <!-- Frames are baked into sprite sheets: /frames/black/sheet-01…08.jpg
+         (4×3 grid, 12 frames per sheet). Self-hosted — no CDN upload needed.
+         To serve from a CDN later, set CDN_FRAME_BASE in src/main.js. -->
+    <section class="p360" id="viewer" data-sequence="black">
+      <div class="p360__sticky">
+        <canvas class="p360__canvas" width="1280" height="720"></canvas>
+        <div class="p360__vignette"></div>
+        <div class="p360__caption">
+          <p class="p360__eyebrow">SCROLL TO ROTATE · 96 FRAMES</p>
+          <h2 class="p360__title hxl">360° VIEW</h2>
+        </div>
+      </div>
+    </section>
+
+    <!-- ══════════════ ORION — SCROLL-SCRUB (was autoplaying video) ══════════════ -->
+    <!-- Sprite sheets: /frames/orion/sheet-01…08.jpg (4×3, 12 frames/sheet) -->
+    <section class="p360 p360--tall" id="orion-scrub" data-sequence="orion">
+      <div class="p360__sticky">
+        <canvas class="p360__canvas" width="1280" height="720"></canvas>
+        <div class="p360__vignette"></div>
+        <div class="p360__caption">
+          <p class="p360__eyebrow">SCROLL TO EXPLORE · 96 FRAMES</p>
+          <h2 class="p360__title hxl">ORION</h2>
+          <p class="p360__eyebrow">FRESH · WOODY · AROMATIC</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════ EDITORIAL SHOWCASE SECTIONS ══════════════ -->
+  <!-- Images are the current placeholder PNGs mapped by name; swap src to
+       the real throne/orion/noble/regal photos when available. -->
+  <section class="editorial-section" data-href="https://www.sarkar.store/products/throne">
+    <img class="editorial-bg" src="/images/blubbfblubbfblub.png" alt="Throne parfum" loading="lazy" />
+    <div class="editorial-overlay"></div>
+    <div class="editorial-text">
+      <p class="edit-accords">WARM · LEATHER · AMBER</p>
+      <h2 class="edit-name">THRONE</h2>
+      <p class="edit-desc">ABSOLUTE. DARK. UNRIVALLED.</p>
+      <a class="edit-cta" href="https://www.sarkar.store/products/throne">EXPLORE PARFUM</a>
+    </div>
+  </section>
+
+  <section class="editorial-section" data-href="https://www.sarkar.store/products/orion">
+    <img class="editorial-bg" src="/images/oonshxoonshxoons.png" alt="Orion parfum" loading="lazy" />
+    <div class="editorial-overlay"></div>
+    <div class="editorial-text">
+      <p class="edit-accords">FRESH · CITRUS · AROMATIC</p>
+      <h2 class="edit-name">ORION</h2>
+      <p class="edit-desc">INFINITE. COLD. AMBITIOUS.</p>
+      <a class="edit-cta" href="https://www.sarkar.store/products/orion">EXPLORE PARFUM</a>
+    </div>
+  </section>
+
+  <section class="editorial-section" data-href="https://www.sarkar.store/products/noble">
+    <img class="editorial-bg" src="/images/nvrs3tnvrs3tnvrs.png" alt="Noble parfum" loading="lazy" />
+    <div class="editorial-overlay"></div>
+    <div class="editorial-text">
+      <p class="edit-accords">FRESH · WOODY · AROMATIC</p>
+      <h2 class="edit-name">NOBLE</h2>
+      <p class="edit-desc">RARE. QUIET. POWERFUL.</p>
+      <a class="edit-cta" href="https://www.sarkar.store/products/noble">EXPLORE PARFUM</a>
+    </div>
+  </section>
+
+  <section class="editorial-section" data-href="https://www.sarkar.store/products/regal">
+    <img class="editorial-bg" src="/images/4v3vus4v3vus4v3v.png" alt="Regal parfum" loading="lazy" />
+    <div class="editorial-overlay"></div>
+    <div class="editorial-text">
+      <p class="edit-accords">OUD · SMOKY · MUSK</p>
+      <h2 class="edit-name">REGAL</h2>
+      <p class="edit-desc">BOLD. SACRED. ETERNAL.</p>
+      <a class="edit-cta" href="https://www.sarkar.store/products/regal">EXPLORE PARFUM</a>
+    </div>
+  </section>
+
+  <!-- ══════════════ PREMIUM UNBOXING — SCROLL-SCRUB ══════════════ -->
+  <!-- Loose frames: /frames-src/frames-unboxing/frame_0001…0120.jpg.
+       Set CLOUD in src/unboxing.js to stream from Cloudinary instead. -->
+  <section id="unboxing-section" style="height:500vh;position:relative;background:#000">
+    <div class="unbox-sticky">
+      <canvas id="unbox-canvas"></canvas>
+      <div class="unbox-text">
+        <span class="unbox-eyebrow">CRAFTED TO PERFECTION</span>
+        <h2 class="unbox-heading">UNBOX THE POWER</h2>
+        <p class="unbox-sub">Every bottle, a statement. Every fragrance, a throne.</p>
+        <div class="unbox-accent-line"></div>
+      </div>
+      <div class="unbox-loader">
+        <div class="unbox-loader-bar"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SHOP THE COLLECTION ══════════════ -->
+  <!-- Product cards are generated by src/shop.js from the PRODUCTS array. -->
+  <section id="shop">
+    <div class="shop-inner">
+      <div class="shop-header">
+        <p class="shop-eyebrow">SHOP THE COLLECTION</p>
+        <h2 class="shop-heading">DISCOVER YOUR SIGNATURE</h2>
+      </div>
+      <div class="product-grid">
+        <!-- 4 product cards generated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SECTION A — THE ONE & ONLY ══════════════ -->
+  <section id="the-one">
+    <p class="one-eyebrow final-reveal">THE ONE &amp; ONLY</p>
+    <h2 class="one-heading">
+      <span class="one-line final-reveal">UNISEX IN SPIRIT.</span>
+      <span class="one-line final-reveal">ABSOLUTE IN COMMAND.</span>
+    </h2>
+    <p class="one-sub final-reveal">Power isn't inherited. It's built.</p>
+    <span class="one-divider"></span>
+  </section>
+
+  <!-- ══════════════ SECTION B — CTA ══════════════ -->
+  <section id="cta-section">
+    <div class="cta-inner">
+      <div class="cta-left">
+        <p class="cta-eyebrow final-reveal">LIMITED EDITION</p>
+        <h2 class="cta-heading final-reveal">CLAIM YOUR SARKAR</h2>
+        <p class="cta-desc final-reveal">
+          Wear the king. Become the legend. SARKAR Perfume — an exclusive
+          collection for those who rule.
+        </p>
+        <div class="cta-buttons final-reveal">
+          <button class="cta-primary" id="cta-shop-now" type="button">Shop Now</button>
+          <button class="cta-secondary" id="cta-explore" type="button">Explore Fragrances</button>
+        </div>
+      </div>
+      <div class="cta-right">
+        <img src="/images/oonshxoonshxoons.png" alt="SARKAR Orion" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ══════════════ SECTION C — SITE FOOTER ══════════════ -->
+  <footer id="site-footer">
+    <div class="footer-inner">
+      <div class="footer-grid">
+        <div class="f-col f-col--brand">
+          <p class="f-brand">SARKAR</p>
+          <p class="f-tag">The One &amp; Only</p>
+          <p class="f-desc">Luxury Indian fragrance by Bhuvan Bam.</p>
+        </div>
+        <div class="f-col">
+          <h4 class="f-heading">SHOP</h4>
+          <a class="f-link" href="#shop">Shop All</a>
+          <a class="f-link" href="https://www.sarkar.store/products/throne">THRONE</a>
+          <a class="f-link" href="https://www.sarkar.store/products/orion">ORION</a>
+          <a class="f-link" href="https://www.sarkar.store/products/noble">NOBLE</a>
+          <a class="f-link" href="https://www.sarkar.store/products/regal">REGAL</a>
+          <a class="f-link" href="https://www.sarkar.store/">Build Your Bundle</a>
+        </div>
+        <div class="f-col">
+          <h4 class="f-heading">HELP</h4>
+          <a class="f-link" href="#">Track Order</a>
+          <a class="f-link" href="#">FAQs</a>
+          <a class="f-link" href="#">Contact Us</a>
+          <a class="f-link" href="#">Returns &amp; Refunds</a>
+        </div>
+        <div class="f-col">
+          <h4 class="f-heading">CONNECT</h4>
+          <a class="f-link" href="https://www.instagram.com/">Instagram</a>
+          <a class="f-link" href="https://www.youtube.com/">YouTube</a>
+          <a class="f-link" href="#">Know Sarkar</a>
+          <a class="f-link" href="#">The Inner Circle</a>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p class="f-copy">© 2024 Brix Lifestyle Private Limited. All rights reserved.</p>
+        <div class="f-legal">
+          <a href="#">Privacy Policy</a>
+          <span class="f-dot">·</span>
+          <a href="#">Terms of Service</a>
+          <span class="f-dot">·</span>
+          <a href="#">Shipping Policy</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Page logic is loaded via the module script in <head>;
+       GSAP + ScrollTrigger are bundled from node_modules by Vite. -->
+</body>
+</html>
