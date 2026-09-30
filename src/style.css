@@ -284,7 +284,12 @@ button {
   display: flex;
   width: max-content;
   white-space: nowrap;
+  /* translate3d + will-change force a GPU layer — iOS Safari sometimes
+     refuses to composite plain translateX animations on sticky elements */
   animation: marquee 28s linear infinite;
+  will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .announcement-bar__text {
@@ -301,12 +306,14 @@ button {
 }
 
 @keyframes marquee {
-  from { transform: translateX(0); }
-  to   { transform: translateX(-33.3333%); }
+  from { transform: translate3d(0, 0, 0); }
+  to   { transform: translate3d(-20%, 0, 0); } /* 1/5 — track holds 5 identical copies */
 }
 
+/* Reduced motion: never freeze the banner (owner request) — scroll it
+   gently instead. Slower duration, same seamless loop. */
 @media (prefers-reduced-motion: reduce) {
-  .announcement-bar__track { animation: none; }
+  .announcement-bar__track { animation-duration: 70s; }
 }
 
 /* ──────────────── FIXED HEADER ──────────────── */
